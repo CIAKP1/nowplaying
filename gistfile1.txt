@@ -1,0 +1,33 @@
+meta content="15" http-equiv="refresh" />
+
+
+<html><head><title>Artist</title>
+<style type="text/css">
+body{
+font-size: 12px;
+font-family: Helvetica,Arial,sans-serif;
+color: #000000; 
+background: #transparent; 
+} 
+</style>
+</head><body>
+<p style="text-align: center;">
+</body></html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>laut.fm JS tools demo</title>
+    <meta content='text/html;charset=utf-8' http-equiv='content-type'>
+    <script type="text/javascript" src="//api.laut.fm/js_tools/lautfm_js_tools.0.9.0.js" ></script>
+  </head>
+  <body>
+    
+
+<div id="song"></div>
+ <script type="text/html" id="song_template" charset="utf-8">
+<p><center> <em><%= this.artist.name %><strong> <p> 
+<p><center> <em><%= this.title %><strong> <p> </script>
+<script type="text/javascript" charset="utf-8"> laut.fm.station('cia-radio') 
+.info({container:'station', template:'station_template'}) 
+.current_song({container:'song', template:'song_template'}, true); </script>
